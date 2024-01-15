@@ -78,21 +78,13 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sys_inventario',
+        'HOST': 'mysql-328b658-djangoproject-db.a.aivencloud.com',
+        'PORT': '22171',
         'USER': 'avnadmin',
         'PASSWORD': 'AVNS_tjDwQo16cij_358nh5b',
-        'HOST': 'mysql-328b658-djangoproject-db.a.aivencloud.com',
-        'PORT': 22171,
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-            'connect_timeout': 10,
-            'read_timeout': 10,
-            'write_timeout': 10,
-            'cursorclass': 'pymysql.cursors.DictCursor',
-        },
+        'NAME': 'defaultdb',
     }
 }
-
 
 
 # Password validation
