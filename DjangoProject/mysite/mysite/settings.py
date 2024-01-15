@@ -78,7 +78,7 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'defaultdb',
+        'NAME': 'sys_inventario',
         'USER': 'avnadmin',
         'PASSWORD': 'AVNS_tjDwQo16cij_358nh5b',
         'HOST': 'mysql-328b658-djangoproject-db.a.aivencloud.com',
