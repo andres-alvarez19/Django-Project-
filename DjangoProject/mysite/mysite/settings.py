@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls',
 ]
 
 MIDDLEWARE = [
@@ -69,16 +70,29 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-
+import pymysql
+pymysql.install_as_MySQLdb()
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'defaultdb',
+        'USER': 'avnadmin',
+        'PASSWORD': 'AVNS_tjDwQo16cij_358nh5b',
+        'HOST': 'mysql-328b658-djangoproject-db.a.aivencloud.com',
+        'PORT': 22171,
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'connect_timeout': 10,
+            'read_timeout': 10,
+            'write_timeout': 10,
+            'cursorclass': 'pymysql.cursors.DictCursor',
+        },
     }
 }
+
 
 
 # Password validation
